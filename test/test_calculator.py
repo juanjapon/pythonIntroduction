@@ -1,5 +1,5 @@
 from calculator import square
-
+import pytest
 
 
 def test_square():
@@ -10,3 +10,6 @@ def test_square_negative():
     assert square(-5)==25
 def test_square_zero():
     assert square(0)==0
+def test_square_str():
+    with pytest.raises(TypeError):
+        square("cat")
