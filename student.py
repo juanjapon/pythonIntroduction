@@ -39,17 +39,19 @@ class Student:
                 return "🐶"
             case _:
                 return "/"
+    @classmethod
+    def get(cls):
+        name=input("Name: ")
+        house=input("House: ")
+        pathronus=input("Pathronus: ")
+        return cls(name,house,pathronus)
 
 def main():
-    student = get_student()
+    student = Student.get()
     print("Expecto Patronum!!!!")
+    print(student)
     print(student.charm())
 
-def get_student():
-    name=input("Name: ")
-    house=input("House: ")
-    pathronus=input("Pathronus: ")
-    return Student(name,house,pathronus)
 
      
     
